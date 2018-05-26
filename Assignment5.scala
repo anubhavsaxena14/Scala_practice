@@ -1,15 +1,18 @@
-object Assignment6{
+object Assignment5{
     def main(args: Array[String]){
-        var i:int = 0;
-        for(i <- 1 until 50)
+        var n1:Int = 0; var n2:Int = 0; var d1:Int = 0; var d2:Int = 0;
+        var i:Int = 1; var j:Int = 1;
+        println("Enter a number"); 
+        n1 = Console.readInt();
+        println("Enter a number"); 
+        n2 = Console.readInt();
+        for(i <- 1 to (n1&n2))
         {
-            if((!(i%2))||(!(i%3))||(!(i%5))||(!(i%7)))
+            if(n1%i == 0 & n2%i==0)
             {
-            }
-            else
-            {
-                printf("%d",i);
+                d1 = i;
             }
         }
+        printf("Greatest Common Divisor of two numbers is %d\n", (d1)); 
     }
 }
